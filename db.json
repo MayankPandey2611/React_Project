@@ -1,0 +1,295 @@
+{
+    "products": [
+        {
+            "name": "amul milk",
+            "quantity": 1,
+            "price": "Rs.35/- per Litre",
+            "image": "amul.png",
+             "category": "Dairy and Breads"
+        },
+        {
+            "name": "amul butter",
+            "quantity": 2,
+            "price": "Rs.55/- per Kg",
+            "image": "butter.png",
+             "category": "Dairy and Breads"
+        },
+        {
+            "name": "Amul Curd Desi",
+            "quantity": 3,
+            "price": "Rs.45/- per Litre",
+            "image": "curd.png",
+             "category": "Dairy and Breads"
+        },
+        {
+            "name": "Brown Bread",
+            "quantity": 1,
+            "price": "Rs.32/- per Litre",
+            "image": "bread.png",
+             "category": "Dairy and Breads"
+        },
+        {
+            "name": "Bread Plutter",
+            "quantity": 1,
+            "price": "Rs.45/- per Litre",
+            "image": "bread1.png",
+             "category": "Dairy and Breads"
+        },
+        {
+            "name": "Normal Bread",
+            "quantity": 1,
+            "price": "Rs.29/- per Litre",
+            "image": "bread2.png",
+             "category": "Dairy and Breads"
+        },
+         {
+            "name": "Amul Cheese Cubes",
+            "quantity": 1,
+            "price": "Rs.135/- per Kg",
+            "image": "cheese.png",
+             "category": "Dairy and Breads"
+            
+        },
+       
+         
+        {
+            "name":"school cover paper",
+            "quantity":1,
+            "price":"Rs.65/- set of paper",
+            "image":"amul.png",
+            "category": "Rolling paper & tobacco"
+        },
+          {
+            "name":"Rolling Paper 64 sheets + 64 tips with Crushing Tray by Blaze Up",
+            "quantity":1,
+            "price":"Rs.90/- set of paper",
+            "image":"amul.png",
+             "category": "Rolling paper & tobacco"
+        },
+          {
+            "name":"Brown Rolling Paper Cones - Stash Pro",
+            "quantity":1,
+            "price":"Rs.75/- set of paper",
+            "image":"amul.png",
+             "category": "Rolling paper & tobacco"
+        },
+          {
+            "name":"Thins Pre-Rolled Rolling Paper By LIT",
+            "quantity":1,
+            "price":"Rs.115/- set of paper",
+            "image":"amul.png",
+             "category": "Rolling paper & tobacco"
+        },
+          {
+            "name":"Colour Roach - Stash Pro",
+            "quantity":1,
+            "price":"Rs.125/- set of paper",
+            "image":"amul.png",
+             "category": "Rolling paper & tobacco"
+        },
+          {
+            "name":"Brown Regulars Rolling Paper by Blaze Up",
+            "quantity":1,
+            "price":"Rs.105/- set of paper",
+            "image":"amul.png",
+             "category": "Rolling paper & tobacco"
+        },
+          {
+            "name":"Perforated Wide Tips Roach - Raw",
+            "quantity":1,
+            "price":"Rs.45/- set of paper",
+            "image":"cheese.png",
+             "category": "Rolling paper & tobacco"
+        },
+
+          {
+            "name":"Cheetos Flamin Hot Crunchy Puffs",
+            "quantity":1,
+            "price":"Rs.30/- ",
+            "image":"snacks.png",
+             "category":"Snacks & Munchies"
+          },
+            {
+            "name":"Kab's Jackpot Fiery and Crunchy Crisps",
+            "quantity":1,
+            "price":"Rs.50/- ",
+            "image":"snacks.png",
+             "category": "Snacks & Munchies"
+        },
+          {
+            "name":"Jacker Barbeque Potato Crisps",
+            "quantity":1,
+            "price":"Rs.125/- ",
+            "image":"snacks.png",
+             "category": "Snacks & Munchies"
+        },
+          {
+            "name":"Kepps Masala Munch Jowar Puffs",
+            "quantity":1,
+            "price":"Rs.95/- ",
+            "image":"snacks.png",
+             "category": "Snacks & Munchies"
+        },
+          {
+            "name":"Cheetos Cheese Flavoured Puffs",
+            "quantity":1,
+            "price":"Rs.55/- ",
+            "image":"snacks.png",
+             "category":"Snacks & Munchies"
+        },
+          {
+            "name":"Kab's Jackpot Fire Balls Snack",
+            "quantity":1,
+            "price":"Rs.65/- ",
+            "image":"snacks.png",
+             "category":"Snacks & Munchies"
+        },
+          {
+            "name":"Lo! Foods Gluten Free Millet Ragi Chips Healthy Snacks",
+            "quantity":1,
+            "price":"Rs.80/- ",
+            "image":"snacks.png",
+             "category": "Snacks & Munchies"
+        },
+
+          {
+            "name":"limka favour",
+            "quantity":1,
+            "price":"Rs.80/- ",
+            "image":"curd.png",
+             "category": "Mouth fresheners"
+        },
+
+          {
+            "name":"jelly fresh",
+            "quantity":1,
+            "price":"Rs.55/- ",
+            "image":"cheese.png",
+             "category": "Mouth fresheners"
+        },
+          {
+            "name":"coca-freshner",
+            "quantity":1,
+            "price":"Rs.90/- ",
+            "image":"amul.png",
+             "category": "Mouth fresheners"
+        },
+          {
+            "name":"orange-fruit",
+            "quantity":1,
+            "price":"Rs.65/- ",
+            "image":"butter.png",
+             "category": "Mouth fresheners"
+        },
+          {
+            "name":"apple fruit fresheners",
+            "quantity":1,
+            "price":"Rs.95/- ",
+            "image":"cheese.png",
+             "category": "Mouth fresheners"
+        },
+          {
+            "name":"dark chocolate",
+            "quantity":1,
+            "price":"Rs.45/- ",
+            "image":"bread.png",
+             "category": "Mouth fresheners"
+        },
+          {
+            "name":"normal freshener",
+            "quantity":1,
+            "price":"Rs.55/- ",
+            "image":"cheese.png",
+             "category": "Mouth fresheners"
+        },
+
+
+        {
+            "name":"Coca-Cola",
+            "quantity":1,
+            "price":"Rs.60/- ",
+            "image": "drinks.png",
+             "category":   "Cold Drinks & Juices"
+        },
+        {
+            "name":"Mountain Dew",
+            "quantity":1,
+            "price":"Rs.45/- ",
+            "image": "drinks.png",
+             "category":  "Cold Drinks & Juices"
+        },
+        {
+            "name":"Thumbs Up",
+            "quantity":1,
+            "price":"Rs.65/- ",
+            "image": "drinks.png",
+             "category" : "Cold Drinks & Juices"
+        },
+        {
+            "name":"Applie",
+            "quantity":1,
+            "price":"Rs.35/- ",
+            "image": "drinks.png",
+             "category":   "Cold Drinks & Juices"
+        },
+        {
+            "name":"Miranda",
+            "quantity":1,
+            "price":"Rs.85/- ",
+            "image": "drinks.png",
+             "category":  "Cold Drinks & Juices"
+        },
+        {
+            "name":"Fanta",
+            "quantity":1,
+            "price":"Rs.50/- ",
+            "image": "drinks.png",
+             "category":   "Cold Drinks & Juices"
+        },
+
+
+          {
+            "name":"Melody",
+            "quantity":1,
+            "price":"Rs.20/- ",
+            "image": "sweet.png",
+             "category":     "Candies & Gums"
+        },
+          {
+            "name":"Jelly ",
+            "quantity":1,
+            "price":"Rs.76/- ",
+            "image": "sweet.png",
+             "category":    "Candies & Gums"
+        },
+          {
+            "name":"Cake",
+            "quantity":1,
+            "price":"Rs.300/- ",
+            "image": "sweet.png",
+             "category":    "Candies & Gums"
+        },
+          {
+            "name":"Kachha Mango",
+            "quantity":1,
+            "price":"Rs.40/- ",
+            "image": "sweet.png",
+             "category":     "Candies & Gums"
+        },
+          {
+            "name":"Dairy Milk",
+            "quantity":1,
+            "price":"Rs.80/- ",
+            "image": "sweet.png",
+             "category":    "Candies & Gums"
+        },
+          {
+            "name":"London Dairy",
+            "quantity":1,
+            "price":"Rs.60/- ",
+            "image": "sweet.png",
+             "category":   "Candies & Gums"
+        }
+
+    ]
+}
