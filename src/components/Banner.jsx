@@ -57,3 +57,28 @@ const styles = {
 };
 
 export default Banner;
+
+
+//     const ans= mydata.map((key)=>{
+//     return(
+//         <>
+//           <Card style={{ width: '15rem' }}>
+//       <Card.Img variant="top" src={key.images}  />
+//       <Card.Body>
+//         <Card.Title> {key.name}</Card.Title>
+//         <Card.Text>
+//            Category : {key.category}
+//            <br />
+//            Price : {key.price}
+//         </Card.Text>
+//         <Button variant="primary" 
+//         onClick={()=>{dispatch(addtocart({id: key.id, name:key.name,  category:key.category, price:key.price, image:key.image, qnty:1}))}}>Add To Cart</Button>
+//       </Card.Body>
+//     </Card>
+//         </>
+//     )
+// })
+
+   {/* <div id="productlist">
+             {ans}
+        </div>    */}

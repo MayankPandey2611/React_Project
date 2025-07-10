@@ -1,5 +1,11 @@
-import Card from 'react-bootstrap/Card';
+import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import { useDispatch } from "react-redux";
+import { addtocart } from "../cartslice";
+
 import amul from "../images/amul.png";
 import curd from "../images/curd.png";
 import butter from "../images/butter.png";
@@ -10,27 +16,6 @@ import cheese from "../images/cheese.png";
 import drinks from "../images/drinks.png";
 import snacks from "../images/snacks.png";
 import sweet from "../images/sweet.png";
-
-import { useEffect, useState, useRef } from 'react';
-import axios from 'axios';
-import { useDispatch } from 'react-redux';
-import { addtocart } from '../cartslice';
-import { useNavigate } from 'react-router';
-
-const images = {
-  "amul.png": amul,
-  "butter.png": butter,
-  "curd.png": curd,
-  "bread.png": bread,
-  "bread1.png": bread1,
-  "bread2.png": bread2,
-  "cheese.png": cheese,
-  "drinks.png" : drinks,
-  "snacks.png":snacks,
-  "sweet.png":sweet
- 
-};
-
 const categories = [
   "Dairy and Breads",
   "Rolling paper & tobacco",
@@ -39,46 +24,39 @@ const categories = [
   "Cold Drinks & Juices",
   "Candies & Gums"
 ];
+    
+    const images = {
+      "amul.png": amul,
+      "butter.png": butter,
+      "curd.png": curd,
+      "bread.png": bread,
+      "bread1.png": bread1,
+      "bread2.png": bread2,
+      "cheese.png": cheese,
+      "drinks.png" : drinks,
+      "snacks.png":snacks,
+      "sweet.png":sweet
+     
+    };
 
-const Products = () => {
-  const [mydata, setdata] = useState([]);
+const SearchData=()=>{
+    const {txtval} = useParams();
+    const [mydata, setMydata] = useState([]);
+    const dispatch = useDispatch();
+    const loadData=async()=>{
+        let api=`http://localhost:3000/products/?name=${txtval}`;
+        const response = await axios.get(api);
+        console.log(response.data);
+         setMydata(response.data);
+    }
+    useEffect(()=>{
+        loadData();
+    }, []);
+
   const [quantities, setQuantities] = useState({});
-  const dispatch = useDispatch();
-  const scrollRef = useRef();
 
-const navigate = useNavigate();
 
-  const loaddata = async () => {
-    let api = "http://localhost:3000/products";
-    const res = await axios(api);
-    setdata(res.data);
-
-    const initialQuantities = {};
-    res.data.forEach(item => {
-      initialQuantities[item.name] = 0;
-    });
-    setQuantities(initialQuantities);
-  };
-
-  useEffect(() => {
-    loaddata();
-  }, []);
-
-  const increaseQuantity = (name) => {
-    setQuantities(prev => ({
-      ...prev,
-      [name]: (prev[name] || 0) + 1
-    }));
-  };
-
-  const decreaseQuantity = (name) => {
-    setQuantities(prev => ({
-      ...prev,
-      [name]: Math.max((prev[name] || 0) - 1, 0)
-    }));
-  };
-
-  const renderProducts = (category) => {
+      const renderProducts = (category) => {
     const filtered = mydata.filter(p => p.category === category);
     return filtered.map(product => {
       const imgSrc = images[product.image] || amul;
@@ -95,7 +73,7 @@ const navigate = useNavigate();
             cursor: 'pointer'
           }}
         >
-          <Card.Img variant="top" src={imgSrc} onClick={()=>{navigate(`/datashow/${product.id}`)}} style={{
+          <Card.Img variant="top" src={imgSrc} style={{
             height: "140px",
             objectFit: "contain",
             marginTop: "10px"
@@ -173,42 +151,51 @@ const navigate = useNavigate();
     });
   };
 
-  return (
-    <>
-      {categories.map(cat => (
-        <div key={cat}>
-         <h1 style={{ textAlign: "center", margin: "1rem" }}>{cat}</h1>
-         
-       <div 
-  className="scroll-container"
-  style={{
-    display: 'block',
-    width: '100%',
-    overflowX: 'auto',
-    padding: '1rem'
-  }}
->
-  <div
-    id={`product-${cat}`}
-    style={{
-      display: 'flex',
-      flexDirection: 'row',
-      flexWrap: 'nowrap',
-      gap: '1rem',
-      background: '#f9f9f9',
-      padding: '10px',
-      borderRadius: '10px',
-      maxWidth: '90vw'
-    }}
-  >
-    {renderProducts(cat)}
-  </div>
-</div>
-</div>
-      ))}
+    
 
-    </>
-  );
-};
+    return(
+        <>
+         <h1>Search Data</h1>     
+     
 
-export default Products;
+
+        {/* STEP 1: Find categories that actually have search results */}
+{categories
+  .filter((cat) => mydata.some((p) => p.category === cat))
+  .map((cat) => (
+    <div key={cat}>
+      <h1 style={{ textAlign: "center", margin: "1rem" }}>{cat}</h1>
+
+      <div
+        className="scroll-container"
+        style={{
+          display: "block",
+          width: "100%",
+          overflowX: "auto",
+          padding: "1rem",
+        }}
+      >
+        <div
+          id={`product-${cat}`}
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            flexWrap: "nowrap",
+            gap: "1rem",
+            background: "#f9f9f9",
+            padding: "10px",
+            borderRadius: "10px",
+            maxWidth: "90vw",
+          }}
+        >
+          {renderProducts(cat)}
+        </div>
+      </div>
+    </div>
+))}
+
+
+        </>
+    )
+}
+export default SearchData;

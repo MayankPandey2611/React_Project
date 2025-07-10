@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 import { removefromcart } from "../cartslice";
 
 import amul from "../images/amul.png";
@@ -85,6 +85,13 @@ const CartPage = () => {
             onClick={() => navigate("/checkout")}
           >
             Proceed to Checkout
+          </button>
+          &emsp;
+          <button   style={styles.checkoutButton}>
+          <Link to="/" style={{textDecoration:"none" ,color:"white"}}>
+            Go Back To Home
+
+          </Link>
           </button>
         </>
       )}

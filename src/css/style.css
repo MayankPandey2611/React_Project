@@ -412,3 +412,84 @@ body {
   border-radius: 50%;
   font-weight: bold;
 }
+
+
+/* CHECKOUT PAGE */
+
+/* Checkout Page Styling Like LoginPage */
+
+.checkout-container {
+  min-height: 100vh;
+  background: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.checkout-card {
+  background: white;
+  padding: 30px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 420px;
+}
+
+.checkout-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2e7d32;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.checkout-subtitle {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.net-amount {
+  color: #1ba672;
+  font-weight: bold;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout-input {
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.checkout-input:focus {
+  border-color: #1ba672;
+  box-shadow: 0 0 0 2px rgba(27, 166, 114, 0.2);
+}
+
+.checkout-button {
+  background-color: #1ba672;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checkout-button:hover {
+  background-color: #168f5c;
+}

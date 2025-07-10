@@ -26,8 +26,11 @@ const Header = () => {
   const cartRef = useRef();
 
   // SEARCH CODE.....
-  const [searchQuery, setSearchQuery] = useState("");
+  const [txtdata, setTxtData]= useState("");
 
+    const handleSubmit=()=>{
+    navigate(`searchdata/${txtdata}`)
+  }
   const products = [
   { id: "amul.png", name: "Amul Butter" },
   { id: "curd.png", name: "Curd" },
@@ -75,9 +78,9 @@ const Header = () => {
   }, 0);
 
 
-  const filteredProducts = products.filter((product) =>
-  product.name.toLowerCase().includes(searchQuery.toLowerCase())
-);
+//   const filteredProducts = products.filter((product) =>
+//   product.name.toLowerCase().includes(searchQuery.toLowerCase())
+// );
 
 
   return (
@@ -126,7 +129,18 @@ const Header = () => {
  */}
 
 
+     <div style={styles.searchSection} id="searchbox">
+  <FaSearch style={styles.searchIcon} />
+  <input
+    type="text"
+    placeholder="Search for products..."
+    style={styles.searchInput}
+     value={txtdata}
+    onChange={(e)=>{setTxtData(e.target.value)}}
+  />
+  <button style={styles.searchButton} onClick={handleSubmit}>Search</button>
 
+</div>   
 
 
         {/* Icons */}
