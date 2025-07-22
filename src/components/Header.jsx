@@ -78,9 +78,6 @@ const Header = () => {
   }, 0);
 
 
-//   const filteredProducts = products.filter((product) =>
-//   product.name.toLowerCase().includes(searchQuery.toLowerCase())
-// );
 
 
   return (
@@ -91,42 +88,6 @@ const Header = () => {
           <img src="logo.png" alt="Logo" style={styles.logo} />
         </div>
 
-{/* SEARCH 
-
-     <div style={styles.searchSection}>
-  <FaSearch style={styles.searchIcon} />
-  <input
-    type="text"
-    placeholder="Search for products..."
-    style={styles.searchInput}
-    value={searchQuery}
-    onChange={(e) => setSearchQuery(e.target.value)}
-  />
-  <button style={styles.searchButton}>Search</button>
-
-  {searchQuery && (
-    <div style={styles.searchResults}>
-      {filteredProducts.length === 0 ? (
-        <p style={{ padding: "8px" }}>No products found.</p>
-      ) : (
-        filteredProducts.map((product) => (
-          <div
-            key={product.id}
-            style={styles.searchResultItem}
-            onClick={() => {
-              navigate(`/product/${product.id}`);
-              setSearchQuery("");
-            }}
-          >
-            {product.name}
-          </div>
-        ))
-      )}
-    </div>
-  )}
-</div>
-
- */}
 
 
      <div style={styles.searchSection} id="searchbox">
@@ -156,7 +117,7 @@ const Header = () => {
             <span style={styles.cartBadge}>{number}</span>
 
             {isCartOpen && (
-              <div style={styles.cartDropdown}>
+              <div className="cart-dropdown">
                 {cartItems.length === 0 ? (
                   <p style={styles.emptyCartText}>Your cart is empty.</p>
                 ) : (
@@ -330,19 +291,31 @@ const styles = {
     fontWeight: "bold",
   },
   cartDropdown: {
-    position: "absolute",
-    top: "40px",
-    right: "0",
-    width: "320px",
-    maxHeight: "400px",
-    overflowY: "auto",
-    backgroundColor: "#fff",
-    border: "1px solid #ddd",
-    borderRadius: "6px",
-    boxShadow: "0 4px 10px rgba(0,0,0,0.15)",
-    padding: "10px",
-    zIndex: 2000,
+  position: "absolute",
+  top: "40px",
+  right: "10px",
+  width: "300px",
+  maxHeight: "400px",
+  overflowY: "auto",
+  backgroundColor: "#fff",
+  border: "1px solid #ddd",
+  borderRadius: "6px",
+  boxShadow: "0 4px 10px rgba(0,0,0,0.15)",
+  padding: "10px",
+  zIndex: 2000,
+  boxSizing: "border-box",
+},
+
+
+  cartdropdown :{
+    right: "5px",
+    left: "5px",
+    width: "auto",
+    maxwidth: "none"
   },
+
+
+
   emptyCartText: {
     textAlign: "center",
     color: "#666",
@@ -432,3 +405,88 @@ searchResultItem: {
 
 
 export default Header;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React, { useEffect, useRef, useState } from "react";
+// import { FaShoppingCart } from "react-icons/fa";
+// import { IoLocationSharp } from "react-icons/io5";
+// import { IoIosArrowDown } from "react-icons/io";
+import "./Header.css"; // Import the CSS styles
+
+// function Header({ number }) {
+//   const [cartVisible, setCartVisible] = useState(false);
+//   const cartRef = useRef(null);
+
+//   const toggleCart = () => {
+//     setCartVisible(!cartVisible);
+//   };
+
+//   const handleClickOutside = (event) => {
+//     if (cartRef.current && !cartRef.current.contains(event.target)) {
+//       setCartVisible(false);
+//     }
+//   };
+
+//   useEffect(() => {
+//     document.addEventListener("mousedown", handleClickOutside);
+//     return () => document.removeEventListener("mousedown", handleClickOutside);
+//   }, []);
+
+//   return (
+//     <div className="header-container">
+//       <div className="logo-section">
+//         <img src="logo.png" alt="Logo" className="logo" />
+//         <div className="location">
+//           <IoLocationSharp className="location-icon" />
+//           <span>Indore</span>
+//           <IoIosArrowDown className="arrow-icon" />
+//         </div>
+//       </div>
+
+//       <div className="search-section">
+//         <input
+//           type="text"
+//           className="search-box"
+//           placeholder="Search ‘milk’"
+//         />
+//         <button>Search</button>
+//       </div>
+
+//       <div className="icons" ref={cartRef}>
+//         <button className="login-button">Login</button>
+
+//         <div className="cart" onClick={toggleCart}>
+//           <FaShoppingCart className="cart-icon" />
+//           <span className="cart-badge">{number}</span>
+//         </div>
+
+//         {cartVisible && (
+//           <div className="cart-dropdown">
+//             <h4>My Cart</h4>
+//             <p>Your cart is empty</p>
+//           </div>
+//         )}
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default Header;
